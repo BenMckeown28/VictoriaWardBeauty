@@ -397,3 +397,17 @@
     }
   });
 </script>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+  Email.send({
+    Host: "https://benmckeown28.github.io/VictoriaWardBeauty/",
+    Username: "benmckeown1998@gmail.com",
+    Password: "0c535679-ba41-4017-9998-78b06b4af0cf",
+    To: 'benmckeown1998@gmail.com',
+    From: "benmckeown1998@gmail.com",
+    Subject: "This is the subject",
+    Body: "And this is the body"
+  }).then(
+    message => alert(message)
+  );
+</script>
