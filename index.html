@@ -12,26 +12,33 @@
 <body>
   <div id="homepage">
 
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+    <i class="fa fa-bars"></i>
+     </span>
+      <a href="#" class="logo">  <img src="images/logo.png" /></a>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="#" id="Home" class="nav-links">Home</a>
+        </li>
+        <li>
+          <a href="#" id="prices" class="nav-links">Treatments & Prices</a>
+        </li>
+        <li>
+          <a href="#" id="gallery" class="nav-links">Gallery</a>
+        </li>
+        <li>
+          <a href="#" id="about" class="nav-links">About</a>
+        </li>
+        <li>
+          <a href="#" id="contact" class="nav-links">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+
     <div class="bg-img">
-      <div class="container">
-        <div id="topnav" class="topnav">
-          <img src="images/logo.png" />
-          <div id="links">
 
-            <a href="#" id="Home">Home</a>
-            <a href="#" id="prices">Treatments & Prices</a>
-            <a href="#" id="Gallery">Gallery</a>
-            <a href="#" id="about">About</a>
-            <a href="#" id="contact">Contact</a>
-            <a href="#" class="menu" id="menu" href="javascript:void(0);" class="icon" onclick="myFunction()">
-             <i class="fa fa-bars"></i>
-           </a>
-          </div>
-
-
-
-        </div>
-      </div>
 
 
       <div class="middle">
@@ -256,11 +263,7 @@
         <img src="images/gallery/8.jpg" />
         <img src="images/gallery/9.jpg" />
       </div>
-      <div class="column">
-        <img src="images/gallery/7.jpg" />
-        <img src="images/gallery/8.jpg" />
-        <img src="images/gallery/9.jpg" />
-      </div>
+
     </div>
   </div>
 
@@ -317,10 +320,22 @@
   </div>
 
 </body>
+<footer>
+  Website created by <a href="https://github.com/BenMckeown28">Ben McKeown</a>
+</footer>
 
 </html>
 
 <script>
+  let mainNav = document.getElementById('js-menu');
+  let navBarToggle = document.getElementById('js-navbar-toggle');
+
+  navBarToggle.addEventListener('click', function() {
+
+    mainNav.classList.toggle('active');
+  });
+
+
   $(function() {
     $(document).scroll(function() {
       var $nav = $("#topnav");
@@ -329,53 +344,37 @@
   });
 
 
-
   $("#Home").click(function() {
-
     $('html, body').animate({
       scrollTop: $("#homepage").offset().top
     }, 'slow');
   });
 
-  $("#prices").click(function() {
 
+  $("#prices").click(function() {
     $('html, body').animate({
       scrollTop: $("#treatprice").offset().top
     }, 'slow');
   });
   $("#Gallery").click(function() {
-
     $('html, body').animate({
       scrollTop: $("#gallery").offset().top
     }, 'slow');
   });
   $("#about").click(function() {
-
     $('html, body').animate({
       scrollTop: $("#aboutsec").offset().top
     }, 'slow');
   });
   $("#contact").click(function() {
-
     $('html, body').animate({
       scrollTop: $("#contactme").offset().top
     }, 'slow');
   });
-
   $("#scroll-ind").click(function() {
-
     $('html, body').animate({
       scrollTop: $("#mouse").offset().top
     }, 'slow');
-  });
-
-
-
-  $(function() {
-    $(document).scroll(function() {
-      var $nav = $(".topnav");
-      $nav.toggleClass('scroll', $(this).scrollTop() > $nav.height());
-    });
   });
 
 
@@ -385,27 +384,12 @@
     console.log($(window).scrollTop());
     var topDivHeight = $("#homepage").height();
     var viewPortSize = $(window).height();
-
     var triggerAt = 4300;
     var triggerHeight = (topDivHeight - viewPortSize) + triggerAt;
     console.log(triggerHeight);
     if ($(window).scrollTop() >= triggerHeight) {
-      $('.headtitle ').css('visibility', 'visible').hide().fadeIn(1600);
+      $('.headtitle ').css('visibility', 'visible').hide().fadeIn(2000);
       $(this).off('scroll');
     }
   });
-</script>
-
-<script src="https://smtpjs.com/v3/smtp.js">
-  Email.send({
-    Host: "https://benmckeown28.github.io/VictoriaWardBeauty/",
-    Username: "benmckeown1998@gmail.com",
-    Password: "0c535679-ba41-4017-9998-78b06b4af0cf",
-    To: 'benmckeown1998@gmail.com',
-    From: "benmckeown1998@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body"
-  }).then(
-    message => alert(message)
-  );
 </script>

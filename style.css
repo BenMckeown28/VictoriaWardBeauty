@@ -1,9 +1,18 @@
 *{
   margin:0;
   padding:0;
+   box-sizing: border-box;
 }
 body{
   background-color: white;
+}
+footer{
+  background-color:#a77d43;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 40px;
 }
 .bg-img{
   background-image: url("images/spahead.jpg");
@@ -11,10 +20,9 @@ body{
 
 
   background-position: center;
-  background-repeat: no-repeat;
+
   background-size: cover;
 
-  position: relative;
 
 }
 
@@ -254,76 +262,79 @@ animation: scroll-ind 2s infinite;
     top:30px;
   }
 }
-.topnav{
-  overflow:hidden;
-  display: flex;
-z-index: 1;
-justify-content: space-around;
-align-items: center;
-padding: 40px;
+
+
+
+
+.navbar {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
 position: fixed;
+z-index: 1;
+background: white;
 width: 100%;
-  }
 
-.topnav a{
+}
+.main-nav {
+    list-style-type: none;
 
+}
+.nav-links,
+.logo {
+    text-decoration: none;
+    color: black;
+}
+.nav-links:hover{
+  color: green;
 
-font-family: 'Montserrat', sans-serif;
-  color: white;
+}
+.logo img{
+  width:274.5px;
+  height:61.5px;
+}
 
-  text-align: center;
-  padding: 14px 40px;
+.main-nav li {
+padding: 40px;
+    text-align: center;
+}
+.navbar li a{
   margin: 0;
-  text-decoration: none;
-  font-size: 18px;
-  position: fixed;
-flex: 1;
+}
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.navbar-toggle {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+
+    font-size: 24px;
+}
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+.active {
+  display: block;
 }
 
 
-.topnav img{
-
-width:274.5px;
-height:61.5px;
-
-}
 
 
-.topnav a{
-  position: relative;
-  color: white;
-  text-decoration: none;
-}
-
-.topnav a:before {
-
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-
-}
-
-.topnav a:hover:before {
-
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
 
 
 @media all and (max-width: 1455px) {
 .quote h2{
   font-size: 100px;
 }
+
 }
 
 @media all and (max-width: 973px) {
@@ -335,61 +346,37 @@ flex-direction: column;
 
 @media all and (max-width : 1195px){
 
-  .topnav a{
-  display: none;
-  }
-  #menu{
-    display: block;
-    font-size: 30px;
-  }
-
+.prices tbody{
+  width: 500px;
 }
-
-
-
-.topnav.scrolled {
-  background-color: #fff !important;
-  transition: background-color 350ms linear;
-  -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+.about{
+  flex-direction: column;
 }
-.topnav.scrolled a{
-  color: black;
-}
-
-
-
-
-.topnav.scrolled a:before {
-
-  content: "";
-  position: absolute;
+.about-text{
+  text-align: center;
   width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-
+  display: flex;
+margin-top: 40px;
+}
+.about-title li h2{
+  text-align: center;
+  margin-top: 5%;
+}
+.contact2{
+  flex-direction: column;
+  text-align: center;
+}
+.contact-form{
+  margin-top: 50px;
+  margin-left: 0;
+}
+.about-text{
+  margin-top: 50px;
+  padding: 0;
+}
 }
 
-.topnav.scrolled a:hover:before {
 
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-
-
-.changeColor{
-  background-color: green;
-}
 .headtitle {
     font-family: 'Montserrat', sans-serif;
 visibility: hidden;
@@ -480,3 +467,35 @@ margin: 5px;
     max-width: 100%;
   }
 }
+
+@media screen and (min-width: 1169px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .nav-links {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .navbar-toggle {
+       display: none;
+    }
+    .logo:hover,
+    .nav-links:hover {
+        color:green;
+    }
+  }
