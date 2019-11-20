@@ -18,21 +18,31 @@
      </span>
       <a href="#" class="logo">  <img src="images/logo.png" /></a>
       <ul class="main-nav" id="js-menu">
-        <li>
-          <a href="#" id="Home" class="nav-links">Home</a>
-        </li>
-        <li>
-          <a href="#" id="prices" class="nav-links">Treatments & Prices</a>
-        </li>
-        <li>
-          <a href="#" id="gallery" class="nav-links">Gallery</a>
-        </li>
-        <li>
-          <a href="#" id="about" class="nav-links">About</a>
-        </li>
-        <li>
-          <a href="#" id="contact" class="nav-links">Contact</a>
-        </li>
+        <a href="#" id="Home" class="nav-links">
+          <li>
+            Home
+          </li>
+        </a>
+        <a href="#" id="prices" class="nav-links">
+          <li>
+            Treatments & Prices
+          </li>
+        </a>
+        <a href="#" id="gallery" class="nav-links">
+          <li>
+            Gallery
+          </li>
+        </a>
+        <a href="#" id="about" class="nav-links">
+          <li>
+            About
+          </li>
+        </a>
+        <a href="#" id="contact" class="nav-links">
+          <li>
+            Contact
+          </li>
+        </a>
       </ul>
     </nav>
 
@@ -86,7 +96,7 @@
   </div>
   <div id="treatprice" class="prices-container">
 
-    <div class="Prices">
+    <div id="prices" class="Prices">
       <h2>Treatments and Prices</h2>
 
       <table>
@@ -385,11 +395,21 @@
     var topDivHeight = $("#homepage").height();
     var viewPortSize = $(window).height();
     var triggerAt = 4300;
+    var triggerAt2 = 5200;
     var triggerHeight = (topDivHeight - viewPortSize) + triggerAt;
     console.log(triggerHeight);
+    var topDivHeightPrices = $("#prices").height();
+    var triggerHeightprices = (topDivHeightPrices - viewPortSize) + 6000;
+    console.log(triggerHeightprices);
     if ($(window).scrollTop() >= triggerHeight) {
       $('.headtitle ').css('visibility', 'visible').hide().fadeIn(2000);
       $(this).off('scroll');
     }
+
+    if ($(window).scrollTop() >= triggerHeightprices) {
+      $('.prices ').css('visibility', 'visible').hide().fadeIn(6000);
+      $(this).off('scroll');
+    }
+
   });
 </script>
