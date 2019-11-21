@@ -20,27 +20,27 @@
       <ul class="main-nav" id="js-menu">
         <a href="#" id="Home" class="nav-links">
           <li>
-            Home
+            home
           </li>
         </a>
         <a href="#" id="prices" class="nav-links">
           <li>
-            Treatments & Prices
+            treatments & prices
           </li>
         </a>
         <a href="#" id="gallery" class="nav-links">
           <li>
-            Gallery
+            gallery
           </li>
         </a>
         <a href="#" id="about" class="nav-links">
           <li>
-            About
+            about
           </li>
         </a>
         <a href="#" id="contact" class="nav-links">
           <li>
-            Contact
+            contact
           </li>
         </a>
       </ul>
@@ -256,25 +256,39 @@
 
 
   </div>
-  <div id="gallery" class="gallery">
+  <div id="Gallery" class="gallery">
     <div class="row">
-      <div class="column">
-        <img src="images/gallery/1.jpg" />
-        <img src="images/gallery/2.jpg" />
-        <img src="images/gallery/3.jpg" />
+      <div class="responsive">
+        <div class="column">
+          <img src="images/gallery/1.jpg" />
+          <img src="images/gallery/2.jpg" />
+          <img src="images/gallery/3.jpg" />
+        </div>
       </div>
-      <div class="column">
-        <img src="images/gallery/4.jpg" />
-        <img src="images/gallery/5.jpg" />
-        <img src="images/gallery/6.jpg" />
+      <div class="responsive">
+        <div class="column">
+          <img src="images/gallery/4.jpg" />
+          <img src="images/gallery/5.jpg" />
+          <img src="images/gallery/6.jpg" />
+        </div>
       </div>
-      <div class="column">
-        <img src="images/gallery/7.jpg" />
-        <img src="images/gallery/8.jpg" />
-        <img src="images/gallery/9.jpg" />
+      <div class="responsive">
+        <div class="column">
+          <img src="images/gallery/7.jpg" />
+          <img src="images/gallery/8.jpg" />
+          <img src="images/gallery/9.jpg" />
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="column">
+          <img src="images/gallery/7.jpg" />
+          <img src="images/gallery/8.jpg" />
+          <img src="images/gallery/9.jpg" />
+        </div>
       </div>
 
     </div>
+    <div class="clearfix"></div>
   </div>
 
   <div id="aboutsec" class="about">
@@ -366,9 +380,9 @@
       scrollTop: $("#treatprice").offset().top
     }, 'slow');
   });
-  $("#Gallery").click(function() {
+  $("#gallery").click(function() {
     $('html, body').animate({
-      scrollTop: $("#gallery").offset().top
+      scrollTop: $("#Gallery").offset().top
     }, 'slow');
   });
   $("#about").click(function() {
