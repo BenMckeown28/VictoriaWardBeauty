@@ -1,3 +1,3 @@
 # VictoriaWardBeauty
 
-http://victoriawardbeautytherapy.benmckeown.x10.mx/
+https://benmckeown28.github.io/VictoriaWardBeauty/
